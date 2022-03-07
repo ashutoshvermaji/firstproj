@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+</head>
+<body>
+ <center>
+     <h1>Marksheet</h1>
+
+     <table width="50%" border="1" cellspacing="0" cellpadding="2">
+         <th><img src="/static/cbselogo.png" width="125px"></th>
+         <th><h2>central board of secondary education<br>New Delhi</h2></th>
+     </table><br>
+
+     <table width="50%" border="1" cellspacing="0" cellpadding="2">
+         <td>
+             <h3>
+                 {{ pre }}&nbsp{{ send_to_result_name }}&nbsp&nbsp{{ post }}&nbsp{{ send_to_result_fname }}<br>
+                 date-of-Birth- &nbsp{{ send_to_result_dob }}&nbsp{{ send_to_result_gender }}<br>
+                 Roll nO.-&nbsp{{ send_to_result_rollno }}
+             </h3>
+         </td>
+     </table><br>
+
+     <table width="50%" border="1" cellspacing="0" cellpadding="2">
+         <tr><th>code</th>  <th>subject</th>  <th>min</th>  <th>max</th>  <th>marks obtained</th>  <th>Remark</th></tr>
+         <tr><td>100</td>  <td>hindi</td>  <td>33</td>  <td>100</td>  <td>{{ send_to_result_hindi }}</td>  <td>-</td></tr>
+         <tr><td>200</td>  <td>english</td>  <td>33</td>  <td>100</td>  <td>{{ send_to_result_english }}</td>  <td>-</td></tr>
+         <tr><td>300</td>  <td>math</td>  <td>33</td>  <td>100</td>  <td>{{ send_to_result_math }}</td>  <td>-</td></tr>
+         <tr><td>400</td>  <td>physics</td>  <td>33</td>  <td>100</td>  <td>{{ send_to_result_physics }}</td>  <td>-</td></tr>
+         <tr><td>500</td>  <td>chemistry</td>  <td>33</td>  <td>100</td>  <td>{{ send_to_result_chemistry }}</td>  <td>-</td></tr>
+         <tr>  <td colspan="4"><center>Total Marks</center></td>  <td>{{total }}</td>  <td>-</td></tr>
+     </table>
+
+     <table width="50%" border="1" cellspacing="0" cellpadding="2">
+          <td>Result:-&nbsp&nbsp{{ div }}</td><td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Percentage:{{ per }}</td>
+     </table>
+ </center>
+
+</body>
+</html>
